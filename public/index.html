@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Portal</title>
+</head>
+
+<body>
+    <nav class="z-depth-0 grey lighten-4">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">
+                <img class="logo" src="./images/logo.png" style="width: 180px; margin-top: 10px;">
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="logged-in">
+                    <a href="#" class="grey-text" id="logout">Logout</a>
+                </li>
+                <li class="logged-out">
+                    <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- LOGIN MODAL -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <h4>Login</h4><br />
+            <form id="login-form">
+                <div class="input-field">
+                    <input type="email" id="login-email" required />
+                    <label for="login-email">Email address</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="login-password" required />
+                    <label for="login-password">Your password</label>
+                </div>
+                <button class="btn yellow darken-2 z-depth-0">Login</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <h1>LIST OF PROPERTIES</h1>
+
+    <div id="eachProperty" class="eachProperty">
+    </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyAZ3WDXoUdL49tLdbt1Q0G0o4OYmqIknXo",
+            authDomain: "prws-67487.firebaseapp.com",
+            databaseURL: "https://prws-67487.firebaseio.com",
+            projectId: "prws-67487",
+            storageBucket: "prws-67487.appspot.com",
+            messagingSenderId: "601247788376",
+            appId: "1:601247788376:web:d4a8c104806760da2f892d"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(config);
+
+        //make auth and database references
+        const auth = firebase.auth()
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="./data/data.json"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="auth.js"></script>
+
+</body>
+
+</html>

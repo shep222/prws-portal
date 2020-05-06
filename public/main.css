@@ -1,0 +1,72 @@
+body {
+    margin: 20px;
+}
+
+
+
+
+.eachProperty {
+    /* display: inline-block; */
+    /* justify-content: space-between; */
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.singleProp {
+    width: 40%;
+    background-color: pink;
+    display:flex;
+    margin: 10px;
+}
+
+.address {
+    margin-bottom: 0;
+}
+
+.address2 {
+    margin-top: 0;
+}
+
+
+.mainImg {
+    width: 100px;
+    padding: 10px;
+}
+
+
+
+.detailPic {
+    width: 300px;
+    margin: 10px;
+}
+
+.imgContainer {
+    /* height: 440px; */
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+}
+
+
+.eachPicDiv {
+    display: inline-block;
+    position: relative;
+}
+
+.rBtn {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+ion-icon {
+  color: blue;
+}
+
+.logo {
+    width: 115px !important;
+    margin: 0 !important;
+}
